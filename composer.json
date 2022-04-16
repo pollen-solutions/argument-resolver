@@ -35,7 +35,8 @@
     }
   },
   "suggest": {
-    "pollen-solutions/container" : "Pollen Solutions - Container Component - PSR-11 ready Dependencies Injection Container."
+    "pollen-solutions/container" : "Pollen Solutions - Container Component - PSR-11 ready Dependencies Injection Container.",
+    "pollen-solutions/http": "Pollen Http Component - HTTP specification layer."
   },
   "minimum-stability": "dev"
 }

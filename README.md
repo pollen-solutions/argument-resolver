@@ -11,3 +11,7 @@ Pollen Solutions **Argument Resolver** Component is a smart arguments resolving 
 ```bash
 composer require pollen-solutions/argument-resolver
 ```
+
+## Credits
+
+- Freely inspired by [Rybakit Arguments Resolver](https://github.com/rybakit/arguments-resolver)
