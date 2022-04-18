@@ -4,7 +4,6 @@ declare(strict_types=1);
 
 namespace Pollen\ArgumentResolver\Resolvers;
 
-use InvalidArgumentException;
 use Pollen\ArgumentResolver\AbstractResolver;
 use Psr\Http\Message\ServerRequestInterface;
 use ReflectionParameter;
@@ -22,7 +21,7 @@ class RequestResolver extends AbstractResolver
     }
 
     /**
-     * @inerhitDoc
+     * @inheritDoc
      */
     public function resolve(ReflectionParameter $parameter): ?array
     {
@@ -83,7 +82,7 @@ class RequestResolver extends AbstractResolver
                 }
 
                 $float_value = (float) $value;
-                if ($value === (string) $float_value) {
+                if (($value === (string) $float_value) || (is_numeric($value) && strpos($value, '.'))) {
                     return $float_value;
                 }
                 break;

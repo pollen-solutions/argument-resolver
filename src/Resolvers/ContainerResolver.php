@@ -20,7 +20,7 @@ class ContainerResolver extends AbstractResolver
     }
 
     /**
-     * @inerhitDoc
+     * @inheritDoc
      */
     public function resolve(ReflectionParameter $parameter): ?array
     {
