@@ -1,9 +1,8 @@
-<?php
-
-declare(strict_types=1);
+<?php declare(strict_types=1);
 
 namespace Pollen\ArgumentResolver;
 
+use Closure;
 use ReflectionClass;
 use ReflectionException;
 use ReflectionFunction;
@@ -29,7 +28,7 @@ abstract class ReflectionFactory
             return (new ReflectionClass(ReflectionMethod::class))->newInstanceArgs($function);
         }
 
-        if (method_exists($function, '__invoke')) {
+        if (!$function instanceof Closure && method_exists($function, '__invoke')) {
             return new ReflectionMethod($function, '__invoke');
         }
 

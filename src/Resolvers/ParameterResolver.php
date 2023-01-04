@@ -55,7 +55,7 @@ class ParameterResolver extends AbstractResolver
         }
 
         $typeName = $type->getName();
-
+        
         if ('array' === $typeName) {
             return is_array($value);
         }
